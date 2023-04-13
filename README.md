@@ -1,10 +1,87 @@
 [![CI](https://github.com/stiliajohny/macos-ansible-playbook/actions/workflows/ci.yml/badge.svg)](https://github.com/stiliajohny/macos-ansible-playbook/actions/workflows/ci.yml)
 
-# Mac Development Ansible Playbook
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GPL3 License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Ask Me Anything][ask-me-anything]][personal-page]
 
-This playbook installs and configures most of the software I use on my Mac for web and software development. Some things in macOS are slightly difficult to automate, so I still have a few manual installation steps, but at least it's all documented here.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/stiliajohny/macos-ansible-playbook">
+    <img src="https://raw.githubusercontent.com/stiliajohny/macos-ansible-playbook/main/.assets/logo.png" alt="Main Logo" width="80" height="80">
+  </a>
 
-## Installation
+  <h3 align="center">macos-ansible-playbook</h3>
+
+  <p align="center">
+    The "Mac Development Ansible Playbook" installs and configures software for web and software development on macOS using Ansible.
+    <br />
+    <a href="./README.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/stiliajohny/macos-ansible-playbook">View Demo</a>
+    ·
+    <a href="https://github.com/stiliajohny/macos-ansible-playbook/issues/new?labels=i%3A+bug&template=1-bug-report.md">Report Bug</a>
+    ·
+    <a href="https://github.com/stiliajohny/macos-ansible-playbook/issues/new?labels=i%3A+enhancement&template=2-feature-request.md">Request Feature</a>
+  </p>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Overriding Defaults](#overriding-defaults)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+The "MacOS Ansible Playbook" is an open-source project that uses Ansible automation to install and configure software packages for web and software development on a Mac computer. The project includes a set of tasks that install and configure a range of applications, tools, and packages, including Homebrew, ChromeDriver, Docker, Firefox, Google Chrome, and Sublime Text, among others. Additionally, the playbook includes dotfiles that help configure various aspects of macOS for better performance and ease of use.
+
+The "MacOS Ansible Playbook" is designed to be fully customizable and flexible, allowing users to add, remove or modify applications, packages, and configurations as needed. The playbook also includes detailed documentation that provides instructions for installing and using the playbook, as well as a full guide for a 100% from-scratch installation.
+
+The project is maintained by Jeff Geerling, an author and consultant who specializes in Ansible and DevOps. It is continuously tested on GitHub Actions' macOS infrastructure, ensuring its reliability and accuracy.
+
+### Built With
+
+- Ansible
+-
+
+GETTING STARTED
+
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+
+- npm
+
+```sh
+npm install npm@latest -g
+```
+
+### Installation
 
 1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
 2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
@@ -19,32 +96,9 @@ This playbook installs and configures most of the software I use on my Mac for w
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
-### Use with a remote Mac
+## Usage
 
-You can use this playbook to manage other Macs as well; the playbook doesn't even need to be run from a Mac at all! If you want to manage a remote Mac, either another Mac on your network, or a hosted Mac like the ones from [MacStadium](https://www.macstadium.com), you just need to make sure you can connect to it with SSH:
-
-1. (On the Mac you want to connect to:) Go to System Preferences > Sharing.
-2. Enable 'Remote Login'.
-
-> You can also enable remote login on the command line:
->
->     sudo systemsetup -setremotelogin on
-
-Then edit the `inventory` file in this repository and change the line that starts with `127.0.0.1` to:
-
-```
-[ip address or hostname of mac]  ansible_user=[mac ssh username]
-```
-
-If you need to supply an SSH password (if you don't use SSH keys), make sure to pass the `--ask-pass` parameter to the `ansible-playbook` command.
-
-### Running a specific set of tagged tasks
-
-You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag. The tags available are `dotfiles`, `homebrew`, `mas`, `extra-packages` and `osx`.
-
-    ansible-playbook main.yml -K --tags "dotfiles,homebrew"
-
-## Overriding Defaults
+### Overriding Defaults
 
 Not everyone's development environment and preferred software configuration is the same.
 
@@ -87,78 +141,57 @@ dockitems_persist:
     pos: 5
 ```
 
-Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available variables.
+---
 
-## Included Applications / Configuration (Default)
+## Roadmap
 
-Applications (installed with Homebrew Cask):
+See the [open issues](https://github.com/stiliajohny/macos-ansible-playbook/issues) for a list of proposed features (and known issues).
 
-- [ChromeDriver](https://sites.google.com/chromium.org/driver/)
-- [Docker](https://www.docker.com/)
-- [Dropbox](https://www.dropbox.com/)
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-- [Google Chrome](https://www.google.com/chrome/)
-- [Handbrake](https://handbrake.fr/)
-- [Homebrew](http://brew.sh/)
-- [LICEcap](http://www.cockos.com/licecap/)
-- [nvALT](http://brettterpstra.com/projects/nvalt/)
-- [Sequel Ace](https://sequel-ace.com) (MySQL client)
-- [Slack](https://slack.com/)
-- [Sublime Text](https://www.sublimetext.com/)
-- [Transmit](https://panic.com/transmit/) (S/FTP client)
+---
 
-Packages (installed with Homebrew):
+## Contributing
 
-- autoconf
-- bash-completion
-- doxygen
-- gettext
-- gifsicle
-- git
-- github/gh/gh
-- go
-- gpg
-- httpie
-- iperf
-- libevent
-- sqlite
-- mcrypt
-- nmap
-- node
-- nvm
-- php
-- ssh-copy-id
-- cowsay
-- readline
-- openssl
-- pv
-- wget
-- wrk
-- zsh-history-substring-search
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-My [dotfiles](https://github.com/geerlingguy/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Finally, there are a few other preferences and settings added on for various apps and services.
+---
 
-## Full / From-scratch setup guide
+## License
 
-Since I've used this playbook to set up something like 20 different Macs, I decided to write up a full 100% from-scratch install for my own reference (everyone's particular install will be slightly different).
+Distributed under the License. See `LICENSE` for more information.
 
-You can see my full from-scratch setup document here: [full-mac-setup.md](full-mac-setup.md).
+## Contact
 
-## Testing the Playbook
+John Stilia - john.stilia@iusearchbtw.blog
 
-Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the playbook. Nope! This project is [continuously tested on GitHub Actions' macOS infrastructure](https://github.com/geerlingguy/mac-dev-playbook/actions?query=workflow%3ACI).
+---
 
-You can also run macOS itself inside a VM, for at least some of the required testing (App Store apps and some proprietary software might not install properly). I currently recommend:
+ACKNOWLEDGEMENTS -->
 
-- [UTM](https://mac.getutm.app)
-- [Tart](https://github.com/cirruslabs/tart)
+## Acknowledgements
 
-## Ansible for DevOps
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Img Shields](https://shields.io)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Pages](https://pages.github.com)
 
-Check out [Ansible for DevOps](https://www.ansiblefordevops.com/), which teaches you how to automate almost anything with Ansible.
-
-## Author
-
-[link-gh-actions]: https://github.com/geerlingguy/mac-dev-playbook/actions?query=workflow%3ACI
+[contributors-shield]: https://img.shields.io/github/contributors/stiliajohny/macos-ansible-playbook.svg?style=for-the-badge
+[contributors-url]: https://github.com/stiliajohny/macos-ansible-playbook/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/stiliajohny/macos-ansible-playbook.svg?style=for-the-badge
+[forks-url]: https://github.com/stiliajohny/macos-ansible-playbook/network/members
+[stars-shield]: https://img.shields.io/github/stars/stiliajohny/macos-ansible-playbook.svg?style=for-the-badge
+[stars-url]: https://github.com/stiliajohny/macos-ansible-playbook/stargazers
+[issues-shield]: https://img.shields.io/github/issues/stiliajohny/macos-ansible-playbook.svg?style=for-the-badge
+[issues-url]: https://github.com/stiliajohny/macos-ansible-playbook/issues
+[license-shield]: https://img.shields.io/github/license/stiliajohny/macos-ansible-playbook?style=for-the-badge
+[license-url]: https://github.com/stiliajohny/macos-ansible-playbook/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/johnstilia/
+[product-screenshot]: .assets/screenshot.png
+[ask-me-anything]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg?style=for-the-badge
+[personal-page]: https://github.com/stiliajohny
