@@ -1,0 +1,662 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
+configure_osx_command_line_tools: true
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: false
+dockitems_remove: []
+# - Launchpad
+# - TV
+# - Podcasts
+# - 'App Store'
+dockitems_persist: []
+# - name: "Sublime Text"
+#   path: "/Applications/Sublime Text.app/"
+#   pos: 5
+
+configure_sudoers: false
+sudoers_custom_config: ""
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - ack
+  - act
+  - airspy
+  - ansible
+  - arduino-cli
+  - asdf
+  - autoconf
+  - aws-cdk
+  - aws-nuke
+  - aws-vault
+  - aws/tap/aws-sam-cli
+  - awscli
+  - awsume
+  - bash-completion
+  - bash-completion
+  - bfg
+  - cfn-lint
+  - checkov
+  - cloud-nuke
+  - cmacrae/formulae/spacebar
+  - cowsay
+  - doxygen
+  - eslint
+  - exa
+  - ffmpeg
+  - fzf
+  - gcc@11
+  - gettext
+  - gh
+  - gifsicle
+  - gifsicle
+  - git
+  - github/gh/gh
+  - gitleaks
+  - gnu-sed
+  - gnupg
+  - go
+  - gpg
+  - gpsd
+  - graphviz
+  - groff
+  - helm
+  - htop
+  - httpie
+  - hugo
+  - infracost
+  - iperf
+  - iperf3
+  - jmeter
+  - jq
+  - k8sgpt-ai/k8sgpt/k8sgpt
+  - k9s
+  - koekeishiya/formulae/skhd
+  - koekeishiya/formulae/yabai
+  - kubectx
+  - latexindent
+  - latexml
+  - libevent
+  - mcrypt
+  - minikube
+  - mysql
+  - ncdu
+  - nikto
+  - nmap
+  - node
+  - nvm
+  - openssl
+  - php
+  - picocom
+  - putty
+  - pv
+  - pyenv
+  - python@3.10
+  - pytorch
+  - readline
+  - spotify-tui
+  - sqlite
+  - ssh-copy-id
+  - swagger-codegen
+  - terminal-notifier
+  - terraform
+  - texlive
+  - tfenv
+  - tig
+  - tldr
+  - tmate
+  - tmux
+  - tree
+  - trivy
+  - unzip
+  - vim
+  - virtualenv
+  - watch
+  - wget
+  - wrk
+  - yarn
+  - zsh-history-substring-search
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - adoptopenjdk/openjdk
+  - aws/tap
+  - cmacrae/formulae
+  - fishtown-analytics/dbt
+  - github/gh
+  - heroku/brew
+  - homebrew/cask
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - homebrew/core
+  - homebrew/services
+  - k8sgpt-ai/k8sgpt
+  - koekeishiya/formulae
+  - thoughtbot/formulae
+  - victor/whereami
+  - weaveworks/tap
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - chromedriver
+  - docker
+  - dropbox
+  - firefox
+  - google-chrome
+  - handbrake
+  - licecap
+  - sequel-ace
+  - slack
+  - sublime-text
+  - transmit
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages:
+  # - name: bundler
+  #   state: present # present/absent/latest, default: present
+  #   version: "~> 1.15.1" # default: N/A
+  - name: activesupport
+    state: present
+    version: "6.1.7.2"
+
+  - name: addressable
+    state: present
+    version: "2.8.1"
+
+  - name: algoliasearch
+    state: present
+    version: "1.27.5"
+
+  - name: atomos
+    state: present
+    version: "0.1.3"
+
+  - name: bigdecimal
+    state: present
+    version: "1.4.1"
+
+  - name: bundler
+    state: present
+    version: "1.17.2"
+
+  - name: CFPropertyList
+    state: present
+    version: "2.3.6"
+
+  - name: claide
+    state: present
+    version: "1.1.0"
+
+  - name: cmath
+    state: present
+    version: "1.0.0"
+
+  - name: cocoapods
+    state: present
+    version: "1.11.3"
+
+  - name: cocoapods-core
+    state: present
+    version: "1.11.3"
+
+  - name: cocoapods-deintegrate
+    state: present
+    version: "1.0.5"
+
+  - name: cocoapods-downloader
+    state: present
+    version: "1.6.3"
+
+  - name: cocoapods-plugins
+    state: present
+    version: "1.0.0"
+
+  - name: cocoapods-search
+    state: present
+    version: "1.0.1"
+
+  - name: cocoapods-trunk
+    state: present
+    version: "1.6.0"
+
+  - name: cocoapods-try
+    state: present
+    version: "1.2.0"
+
+  - name: colored2
+    state: present
+    version: "3.1.2"
+
+  - name: concurrent-ruby
+    state: present
+    version: "1.2.0"
+
+  - name: csv
+    state: present
+    version: "3.0.9"
+
+  - name: date
+    state: present
+    version: "2.0.3"
+
+  - name: dbm
+    state: present
+    version: "1.0.0"
+
+  - name: did_you_mean
+    state: present
+    version: "1.3.0"
+
+  - name: e2mmap
+    state: present
+    version: "0.1.0"
+
+  - name: escape
+    state: present
+    version: "0.0.4"
+
+  - name: etc
+    state: present
+    version: "1.0.1"
+
+  - name: ethon
+    state: present
+    version: "0.16.0"
+
+  - name: fcntl
+    state: present
+    version: "1.0.0"
+
+  - name: ffi
+    state: present
+    version: "1.15.5"
+
+  - name: fiddle
+    state: present
+    version: "1.0.0"
+
+  - name: fileutils
+    state: present
+    version: "1.1.0"
+
+  - name: forwardable
+    state: present
+    version: "1.2.0"
+
+  - name: fourflusher
+    state: present
+    version: "2.3.1"
+
+  - name: fuzzy_match
+    state: present
+    version: "2.0.4"
+
+  - name: gh_inspector
+    state: present
+    version: "1.1.3"
+
+  - name: httpclient
+    state: present
+    version: "2.8.3"
+
+  - name: i18n
+    state: present
+    version: "1.12.0"
+
+  - name: io-console
+    state: present
+    version: "0.4.7"
+
+  - name: ipaddr
+    state: present
+    version: "1.2.2"
+
+  - name: irb
+    state: present
+    version: "1.0.0"
+
+  - name: json
+    state: present
+    version: "2.1.0"
+
+  - name: libxml-ruby
+    state: present
+    version: "3.2.1"
+
+  - name: logger
+    state: present
+    version: "1.3.0"
+
+  - name: matrix
+    state: present
+    version: "0.1.0"
+
+  - name: mini_portile2
+    state: present
+    version: "2.8.0"
+
+  - name: minitest
+    state: present
+    version: "5.11.3"
+
+  - name: molinillo
+    state: present
+    version: "0.8.0"
+
+  - name: mutex_m
+    state: present
+    version: "0.1.0"
+
+  - name: nanaimo
+    state: present
+    version: "0.3.0"
+
+  - name: nap
+    state: present
+    version: "1.1.0"
+
+  - name: net-telnet
+    state: present
+    version: "0.2.0"
+
+  - name: netrc
+    state: present
+    version: "0.11.0"
+
+  - name: nokogiri
+    state: present
+    version: "1.13.8"
+
+  - name: openssl
+    state: present
+    version: "2.1.2"
+
+  - name: ostruct
+    state: present
+    version: "0.1.0"
+
+  - name: power_assert
+    state: present
+    version: "1.1.3"
+
+  - name: prime
+    state: present
+    version: "0.1.0"
+
+  - name: psych
+    state: present
+    version: "3.1.0"
+
+  - name: public_suffix
+    state: present
+    version: "4.0.7"
+
+  - name: rake
+    state: present
+    version: "12.3.3"
+
+  - name: rdoc
+    state: present
+    version: "6.1.2.1"
+
+  - name: rexml
+    state: present
+    version: "3.2.5"
+
+  - name: rss
+    state: present
+    version: "0.2.7"
+
+  - name: ruby-macho
+    state: present
+    version: "2.5.1"
+
+  - name: scanf
+    state: present
+    version: "1.0.0"
+
+  - name: sdbm
+    state: present
+    version: "1.0.0"
+
+  - name: shell
+    state: present
+    version: "0.7"
+
+  - name: sqlite3
+    state: present
+    version: "1.4.2"
+
+  - name: stringio
+    state: present
+    version: "0.0.2"
+
+  - name: strscan
+    state: present
+    version: "1.0.0"
+
+  - name: sync
+    state: present
+    version: "0.5.0"
+
+  - name: test-unit
+    state: present
+    version: "3.2.9"
+
+  - name: thwait
+    state: present
+    version: "0.1.0"
+
+  - name: tracer
+    state: present
+    version: "0.1.0"
+
+  - name: typhoeus
+    state: present
+    version: "1.4.0"
+
+  - name: tzinfo
+    state: present
+    version: "2.0.6"
+
+  - name: webrick
+    state: present
+    version: "1.4.4"
+
+  - name: xcodeproj
+    state: present
+    version: "1.22.0"
+
+  - name: xmlrpc
+    state: present
+    version: "0.3.0"
+
+  - name: zeitwerk
+    state: present
+    version: "2.6.7"
+
+  - name: zlib
+    state: present
+    version: "1.0.0"
+
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages:
+  # - name: mkdocs
+  #   state: present # present/absent/latest, default: present
+  #   version: "0.16.3" # default: N/A
+
+  - name: aiodns
+    state: present
+
+  - name: aiohttp
+    state: present
+
+  - name: aiomultiprocess
+    state: present
+
+  - name: argcomplete
+    state: present
+
+  - name: attila
+    state: present
+
+  - name: autopep8
+    state: present
+
+  - name: aws-lambda-powertools
+    state: present
+
+  - name: bc-detect-secrets
+    state: present
+
+  - name: bc-python-hcl2
+    state: present
+
+  - name: cachetools
+    state: present
+
+  - name: cloudsplaining
+    state: present
+
+  - name: colorama
+    state: present
+
+  - name: configargparse
+    state: present
+
+  - name: cookiecutter
+    state: present
+
+  - name: cyclonedx-python-lib
+    state: present
+
+  - name: deep-merge
+    state: present
+
+  - name: dnspython
+    state: present
+
+  - name: dockerfile-parse
+    state: present
+
+  - name: dpath
+    state: present
+
+  - name: flask
+    state: present
+
+  - name: gitpython
+    state: present
+
+  - name: image
+    state: present
+
+  - name: jsonpath-ng
+    state: present
+
+  - name: junit-xml
+    state: present
+
+  - name: mysql-connector-python
+    state: present
+
+  - name: networkx
+    state: present
+
+  - name: pip-chill
+    state: present
+
+  - name: policyuniverse
+    state: present
+
+  - name: prettytable
+    state: present
+
+  - name: pybind11
+    state: present
+
+  - name: pybind11
+    state: present
+
+  - name: pybind11
+    state: present
+
+  - name: pybind11
+    state: present
+
+  - name: pyinquirer
+    state: present
+
+  - name: pylint
+    state: present
+
+  - name: pypdf2
+    state: present
+
+  - name: qrcode
+    state: present
+
+  - name: rich
+    state: present
+
+  - name: rich
+    state: present
+
+  - name: semantic-version
+    state: present
+
+  - name: shannon-entropy
+    state: present
+
+  - name: tabulate
+    state: present
+
+  - name: termcolor
+    state: present
+
+  - name: transformers
+    state: present
+
+  - name: urwid
+    state: present
+
+  - name: yfinance
+    state: present
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
