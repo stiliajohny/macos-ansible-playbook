@@ -1,5 +1,3 @@
-[![CI](https://github.com/stiliajohny/macos-ansible-playbook/actions/workflows/ci.yml/badge.svg)](https://github.com/stiliajohny/macos-ansible-playbook/actions/workflows/ci.yml)
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -7,6 +5,7 @@
 [![GPL3 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Ask Me Anything][ask-me-anything]][personal-page]
+[![CI](https://github.com/stiliajohny/macos-ansible-playbook/actions/workflows/ci.yml/badge.svg)](https://github.com/stiliajohny/macos-ansible-playbook/actions/workflows/ci.yml)
 
 <!-- PROJECT LOGO -->
 <br />
