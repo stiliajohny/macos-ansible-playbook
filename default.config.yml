@@ -18,8 +18,10 @@ dockitems_persist: []
 #   path: "/Applications/Sublime Text.app/"
 #   pos: 5
 
-configure_sudoers: false
-sudoers_custom_config: ""
+configure_sudoers: true
+sudoers_custom_config: |
+  ansible_user ALL=(ALL) NOPASSWD: /usr/bin/ansible*
+
 # Example:
 # sudoers_custom_config: |
 #   # Allow users in admin group to use sudo with no password.
