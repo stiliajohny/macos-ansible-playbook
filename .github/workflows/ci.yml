@@ -55,8 +55,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - macos-12
-          - macos-11
+          - macos-13
 
     steps:
       - name: Check out the codebase.
