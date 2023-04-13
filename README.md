@@ -39,7 +39,6 @@
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
   - [Overriding Defaults](#overriding-defaults)
@@ -62,24 +61,10 @@ The project is maintained by Jeff Geerling, an author and consultant who special
 ### Built With
 
 - Ansible
--
 
 GETTING STARTED
 
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-
-```sh
-npm install npm@latest -g
-```
 
 ### Installation
 
@@ -167,7 +152,7 @@ Distributed under the License. See `LICENSE` for more information.
 
 ## Contact
 
-John Stilia - john.stilia@iusearchbtw.blog
+John Stilia - john.stilia@indraft.blog
 
 ---
 
