@@ -133,6 +133,7 @@ homebrew_installed_packages:
   - wget
   - wrk
   - yarn
+  - yamllint
   - zsh-history-substring-search
 
 homebrew_taps:

@@ -11,8 +11,8 @@ name: CI
   workflow_dispatch:
 
 jobs:
-  lint:
-    name: Lint
+  ansiblelint:
+    name: Ansible Lint
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
@@ -24,16 +24,34 @@ jobs:
           python-version: "3.x"
 
       - name: Install test dependencies.
-        run: pip3 install yamllint ansible ansible-lint
+        run: pip3 install ansible-lint
 
       - name: Lint code.
-        run: |
-          yamllint .
-          ansible-lint
+        run: ansible-lint
+
+  yamllint:
+    name: YAML Lint
+    runs-on: ubuntu-latest
+    needs: ansiblelint
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install test dependencies.
+        run: pip3 install yamllint
+
+      - name: Lint code.
+        run: yamllint .
 
   integration:
     name: Integration
     runs-on: ${{ matrix.os }}
+    needs: yamllint
     strategy:
       matrix:
         os:
