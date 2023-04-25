@@ -100,6 +100,7 @@ homebrew_installed_packages:
   - mcrypt
   - minikube
   - mysql
+  - molecule
   - ncdu
   - nikto
   - nmap
@@ -193,6 +194,10 @@ gem_packages:
   - name: activesupport
     state: present
     version: "6.1.7.2"
+
+  - name: terraspace
+    state: present
+    version: "2.2.4"
 
   - name: addressable
     state: present
@@ -663,3 +668,42 @@ pip_packages:
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
+
+krew_version: "v0.4.3"
+
+krew_plugins:
+  - "ingress-nginx"
+  - "cost"
+  - "ctx"
+  - "graph"
+  - "krew"
+  - "ktop"
+  - "ns"
+  - "tail"
+
+# Additional Folders
+folders:
+  - path: ~/Documents/GitHub
+    type: "folder"
+    create: true
+  - path: ~/Downloads
+    type: "folder"
+    create: true
+  - path: ~/Pictures
+    type: "folder"
+    create: true
+  - path: ~/Videos
+    type: "folder"
+    create: true
+  - path: ~/Music
+    type: "folder"
+    create: true
+  - path: ~/Desktop
+    type: "folder"
+    create: true
+  - path: ~/Public
+    type: "folder"
+    create: true
+  - path: ~/Templates
+    type: "folder"
+    create: true
