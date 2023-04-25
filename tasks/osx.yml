@@ -19,3 +19,4 @@
     dest: "/users/johnstilia/"
     version: "master"
     bare: yes
+  tags: dotfiles
