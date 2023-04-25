@@ -48,6 +48,7 @@ homebrew_installed_packages:
   - bfg
   - cfn-lint
   - checkov
+  - code
   - cloud-nuke
   - cmacrae/formulae/spacebar
   - cowsay
@@ -55,6 +56,8 @@ homebrew_installed_packages:
   - eslint
   - exa
   - ffmpeg
+  - iterm
+  - iterm2
   - fzf
   - gcc@11
   - gettext
@@ -168,8 +171,6 @@ homebrew_cask_apps:
 mas_installed_apps: []
 mas_email: ""
 mas_password: ""
-
-osx_script: "~/.osx --no-restart"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
@@ -660,17 +661,17 @@ pip_packages:
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
 
-krew_version: "v0.4.3"
+# krew_version: "v0.4.3"
 
-krew_plugins:
-  - "ingress-nginx"
-  - "cost"
-  - "ctx"
-  - "graph"
-  - "krew"
-  - "ktop"
-  - "ns"
-  - "tail"
+# krew_plugins:
+#   - "ingress-nginx"
+#   - "cost"
+#   - "ctx"
+#   - "graph"
+#   - "krew"
+#   - "ktop"
+#   - "ns"
+#   - "tail"
 
 # Additional Folders
 folders:
