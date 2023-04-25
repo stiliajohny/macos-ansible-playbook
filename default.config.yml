@@ -31,6 +31,8 @@ sudoers_custom_config: |
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - ack
+  - agg
+  - ascinnema
   - act
   - airspy
   - ansible
@@ -56,8 +58,6 @@ homebrew_installed_packages:
   - eslint
   - exa
   - ffmpeg
-  - iterm
-  - iterm2
   - fzf
   - gcc@11
   - gettext
@@ -156,15 +156,14 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - chromedriver
   - docker
-  - dropbox
   - firefox
   - google-chrome
   - handbrake
   - licecap
   - sequel-ace
   - slack
-  - sublime-text
   - transmit
+  - iterm
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
