@@ -35,8 +35,7 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [About The Project](#about-the-project)
-  - [Built With](#built-with)
+- [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
 - [Usage](#usage)
@@ -85,12 +84,6 @@ homebrew_installed_packages:
   - cowsay
   - git
   - go
-
-mas_installed_apps:
-  - { id: 443987910, name: "1Password" }
-  - { id: 498486288, name: "Quick Resizer" }
-  - { id: 557168941, name: "Tweetbot" }
-  - { id: 497799835, name: "Xcode" }
 
 composer_packages:
   - name: hirak/prestissimo

@@ -7,12 +7,29 @@ configure_osx: true
 configure_osx_command_line_tools: true
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
-dockitems_remove: []
-# - Launchpad
-# - TV
-# - Podcasts
-# - 'App Store'
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - TV
+  - Podcasts
+  - 'App Store'
+  - 'Messages'
+  - 'Mail'
+  - 'Maps'
+  - 'Photos'
+  - 'FaceTime'
+  - 'Contacts'
+  - 'Calendar'
+  - 'Notes'
+  - 'Reminders'
+  - 'Siri'
+  - 'Freeform'
+  - 'News'
+  - 'Keynote'
+  - 'Numbers'
+  - 'Pages'
+  - 'Preview'
+  - 'System Settings'
 dockitems_persist: []
 # - name: "Sublime Text"
 #   path: "/Applications/Sublime Text.app/"
@@ -50,7 +67,6 @@ homebrew_installed_packages:
   - bfg
   - cfn-lint
   - checkov
-  - code
   - cloud-nuke
   - cmacrae/formulae/spacebar
   - cowsay
