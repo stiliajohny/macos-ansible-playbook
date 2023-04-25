@@ -47,23 +47,23 @@
         when: dockutil_install
         tags: ['dock']
 
-      - name: Remove configured Dock items.
-        ansible.builtin.include_tasks: dock-remove.yml
-        loop: "{{ dockitems_remove }}"
-        tags: ['dock']
+      # - name: Remove configured Dock items.
+      #   ansible.builtin.include_tasks: dock-remove.yml
+      #   loop: "{{ dockitems_remove }}"
+      #   tags: ['dock']
 
-      - name: Ensure required dock items exist.
-        ansible.builtin.include_tasks: dock-add.yml
-        loop: "{{ dockitems_persist }}"
-        tags: ['dock']
+      # - name: Ensure required dock items exist.
+      #   ansible.builtin.include_tasks: dock-add.yml
+      #   loop: "{{ dockitems_persist }}"
+      #   tags: ['dock']
 
-      - name: Ensure dock items are in correct position.
-        ansible.builtin.include_tasks: dock-position.yml
-        when:
-          - item.pos is defined
-          - item.pos > 0
-        loop: "{{ dockitems_persist }}"
-        tags: ['dock']
+      # - name: Ensure dock items are in correct position.
+      #   ansible.builtin.include_tasks: dock-position.yml
+      #   when:
+      #     - item.pos is defined
+      #     - item.pos > 0
+      #   loop: "{{ dockitems_persist }}"
+      #   tags: ['dock']
 
       - name: "See if Dock item {{ item.name | default(item) }} exists."
         ansible.builtin.command: "dockutil --find '{{ item.name }}'"
