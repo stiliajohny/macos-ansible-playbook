@@ -116,7 +116,6 @@ homebrew_installed_packages:
   - terminal-notifier
   - terraform
   - texlive
-  - tfenv
   - tig
   - tldr
   - tmate
