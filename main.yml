@@ -39,59 +39,59 @@
       when: configure_dock
       tags: ['dock']
 
-#  add a block task
-  block:
-    - name: Install dockutil.
-      community.general.homebrew_cask:
-        name: "{{ dockutil_homebrew_cask }}"
-        state: present
-      notify:
-        - Clear homebrew cache
-      when: dockutil_install
-      tags: ['dock']
+    #  add a block task
+    - block:
+      - name: Install dockutil.
+        community.general.homebrew_cask:
+          name: "{{ dockutil_homebrew_cask }}"
+          state: present
+        notify:
+          - Clear homebrew cache
+        when: dockutil_install
+        tags: ['dock']
 
-    - name: Remove configured Dock items.
-      ansible.builtin.include_tasks: dock-remove.yml
-      loop: "{{ dockitems_remove }}"
-      tags: ['dock']
+      - name: Remove configured Dock items.
+        ansible.builtin.include_tasks: dock-remove.yml
+        loop: "{{ dockitems_remove }}"
+        tags: ['dock']
 
-    - name: Ensure required dock items exist.
-      ansible.builtin.include_tasks: dock-add.yml
-      loop: "{{ dockitems_persist }}"
-      tags: ['dock']
+      - name: Ensure required dock items exist.
+        ansible.builtin.include_tasks: dock-add.yml
+        loop: "{{ dockitems_persist }}"
+        tags: ['dock']
 
-    - name: Ensure dock items are in correct position.
-      ansible.builtin.include_tasks: dock-position.yml
-      when:
-        - item.pos is defined
-        - item.pos > 0
-      loop: "{{ dockitems_persist }}"
-      tags: ['dock']
+      - name: Ensure dock items are in correct position.
+        ansible.builtin.include_tasks: dock-position.yml
+        when:
+          - item.pos is defined
+          - item.pos > 0
+        loop: "{{ dockitems_persist }}"
+        tags: ['dock']
 
-    - name: "See if Dock item {{ item.name | default(item) }} exists."
-      ansible.builtin.command: "dockutil --find '{{ item.name }}'"
-      register: dockitem_exists
-      failed_when: >
-        "No such file or directory" in dockitem_exists.stdout
-        or "command not found" in dockitem_exists.stdout
-      changed_when: false
-      tags: ['dock']
+      - name: "See if Dock item {{ item.name | default(item) }} exists."
+        ansible.builtin.command: "dockutil --find '{{ item.name }}'"
+        register: dockitem_exists
+        failed_when: >
+          "No such file or directory" in dockitem_exists.stdout
+          or "command not found" in dockitem_exists.stdout
+        changed_when: false
+        tags: ['dock']
 
-    - name: Get current dock section from output.
-      set_fact:
-        current_section: "{{ dockitem_exists.stdout | regex_replace('^.*was found in (.*) at slot.*$', '\\1') }}"
-      when: dockitem_exists.rc == 0
-      tags: ['dock']
+      - name: Get current dock section from output.
+        set_fact:
+          current_section: "{{ dockitem_exists.stdout | regex_replace('^.*was found in (.*) at slot.*$', '\\1') }}"
+        when: dockitem_exists.rc == 0
+        tags: ['dock']
 
-    - name: Ensure Dock item {{ item.name | default(item) }} exists.
-      ansible.builtin.command: "dockutil --add '{{ item.path }}' --label '{{ item.name }}'"
-      when: dockitem_exists.rc >0 or
-            dockitem_exists.rc == 0 and current_section == 'recent-apps'
-      tags: ['dock']
+      - name: Ensure Dock item {{ item.name | default(item) }} exists.
+        ansible.builtin.command: "dockutil --add '{{ item.path }}' --label '{{ item.name }}'"
+        when: dockitem_exists.rc >0 or
+              dockitem_exists.rc == 0 and current_section == 'recent-apps'
+        tags: ['dock']
 
-    - name: Pause for 7 seconds between dock changes.
-      ansible.builtin.pause:
-        seconds: 7
-      when: dockitem_exists.rc >0 or
-            dockitem_exists.rc == 0 and current_section == 'recent-apps'
-      tags: ['dock']
+      - name: Pause for 7 seconds between dock changes.
+        ansible.builtin.pause:
+          seconds: 7
+        when: dockitem_exists.rc >0 or
+              dockitem_exists.rc == 0 and current_section == 'recent-apps'
+        tags: ['dock']
