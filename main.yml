@@ -1,6 +1,6 @@
 ---
 - name: Configure host.
-  hosts: all
+  hosts: localhost
 
   vars_files:
     - default.config.yml
