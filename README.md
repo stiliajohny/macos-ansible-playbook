@@ -49,15 +49,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
-
-The "MacOS Ansible Playbook" is an open-source project that uses Ansible automation to install and configure software packages for web and software development on a Mac computer. The project includes a set of tasks that install and configure a range of applications, tools, and packages, including Homebrew, ChromeDriver, Docker, Firefox, Google Chrome, and Sublime Text, among others. Additionally, the playbook includes dotfiles that help configure various aspects of macOS for better performance and ease of use.
-
-The "MacOS Ansible Playbook" is designed to be fully customizable and flexible, allowing users to add, remove or modify applications, packages, and configurations as needed. The playbook also includes detailed documentation that provides instructions for installing and using the playbook, as well as a full guide for a 100% from-scratch installation.
-
-The project is maintained by Jeff Geerling, an author and consultant who specializes in Ansible and DevOps. It is continuously tested on GitHub Actions' macOS infrastructure, ensuring its reliability and accuracy.
-
-### Built With
+## Built With
 
 - Ansible
 
