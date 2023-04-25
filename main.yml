@@ -35,9 +35,6 @@
     - import_tasks: tasks/extra-packages.yml
       tags: ["extra-packages"]
 
-    - role: geerlingguy.mac.dock
-      when: configure_dock
-      tags: ['dock']
 
     #  add a block task
     - block:
