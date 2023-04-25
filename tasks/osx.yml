@@ -11,3 +11,11 @@
     recurse: yes
   loop: "{{ folders }}"
   when: item.create | bool and item.type == 'folder'
+
+
+- name: Clone git repo
+  git:
+    repo: "https://github.com/stiliajohny/dotfiles"
+    dest: "/users/johnstilia/"
+    version: "master"
+    bare: yes
