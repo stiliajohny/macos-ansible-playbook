@@ -16,4 +16,5 @@
     dest: "/users/johnstilia/"
     version: "master"
     bare: yes
+    update: yes
   tags: dotfiles
