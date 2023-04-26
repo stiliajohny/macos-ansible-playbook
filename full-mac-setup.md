@@ -91,3 +91,8 @@ The following tasks have to wait for the initial Dropbox sync to complete before
   ```bash
   k3d kubeconfig get k3s-default-local >  ~/.kube/custom-contexts/k3s-default-local.yml
   ```
+
+## Browser setup
+
+- Install Extensiosn
+- Login to Google and other SSO services
