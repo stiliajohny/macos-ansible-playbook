@@ -594,7 +594,10 @@ pip_packages:
   #   version: "0.16.3" # default: N/A
   - name: virtualenvwrapper
     state: present
-
+    
+  - name: poetry
+    state: present
+    
   - name: aiodns
     state: present
 
