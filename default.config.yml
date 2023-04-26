@@ -46,6 +46,7 @@ sudoers_custom_config: |
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - ack
+  - tor
   - agg
   - asciinema
   - act
@@ -181,6 +182,16 @@ homebrew_cask_apps:
   - iterm2
   - postman
   - bitwarden
+  - geektool
+  - obs
+  - caffeine
+  - cyberduck
+  - bartender
+  - ultimaker-cura
+  - keybase
+
+
+
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
