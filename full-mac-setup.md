@@ -4,6 +4,7 @@
 
 Before starting, I completed Apple's mandatory macOS setup wizard (creating a local user account, and optionally signing into my iCloud account). Once on the macOS desktop, I do the following (in order):
 
+- Install [Dockutil](https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3.0.2.pkg)
 - Install Ansible
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
   2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
@@ -63,7 +64,7 @@ brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 ```
 
-### Vim setup.
+### Vim setup
 
 - Open vim
 - Install the plugins with `:PlugInstall`
@@ -78,3 +79,21 @@ brew install font-hack-nerd-font
 # Get some Apps Configured
 
 # k3d
+
+- Confirm k3d is installed
+
+  ```bash
+  k3d --version
+  ```
+
+- Create a cluster
+
+  ```bash
+  k3d cluster create k3s-default-local --api-port 6550 -p "8081:80@loadbalancer" -p "8444:443@loadbalancer" --agents 1
+  ```
+
+- Export the kubeconfig
+
+  ```bash
+  k3d kubeconfig get k3s-default-local >  ~/.kube/custom-contexts/k3s-default-local.yml
+  ```
