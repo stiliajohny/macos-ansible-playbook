@@ -63,6 +63,7 @@ sudoers_custom_config: |
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - ack
+  - openjdk
   - tor
   - agg
   - asciinema
@@ -164,6 +165,11 @@ homebrew_installed_packages:
   - yarn
   - yamllint
   - zsh-history-substring-search
+  - zsh-syntax-highlighting
+  - zsh-autosuggestions
+  - zsh-completions
+  - zsh-navigation-tools
+  - ffmpeg
 
 homebrew_taps:
   - homebrew/core
@@ -206,8 +212,27 @@ homebrew_cask_apps:
   - bartender
   - ultimaker-cura
   - keybase
-
-
+  - visual-studio-code
+  - flutter
+  - processing
+  - ghidra
+  - sf-symbols
+  - appcleaner
+  - the-unarchiver
+  - coconutbattery
+  - discord
+  - signal
+  - zulip
+  - zoom
+  - mactex
+  - libreoffice
+  - zotero
+  - vlc
+  - spotify
+  - blender
+  - blackhole-2ch
+  - gimp
+  - prusaslicer
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
