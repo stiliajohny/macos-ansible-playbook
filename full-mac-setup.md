@@ -71,4 +71,10 @@ brew install font-hack-nerd-font
 ### Tmux setup.
 
 - Open tmux
+- Install TPM:
+  `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 - Install tmux plugins with `prefix + I`
+
+# Get some Apps Configured
+
+# k3d
