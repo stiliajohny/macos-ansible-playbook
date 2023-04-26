@@ -13,7 +13,7 @@
 - name: Clone git repo
   git:
     repo: "https://github.com/stiliajohny/dotfiles"
-    dest: "/users/johnstilia/"
+    dest: "{{ ansible_env.HOME }}/.cfg"
     version: "master"
     bare: yes
     update: yes
