@@ -5,13 +5,12 @@
 [![GPL3 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Ask Me Anything][ask-me-anything]][personal-page]
-[![CI](https://github.com/stiliajohny/macos-ansible-playbook/actions/workflows/ci.yml/badge.svg)](https://github.com/stiliajohny/macos-ansible-playbook/actions/workflows/ci.yml)
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/stiliajohny/macos-ansible-playbook">
-    <img src="https://raw.githubusercontent.com/stiliajohny/macos-ansible-playbook/main/.assets/logo.png" alt="Main Logo" width="80" height="80">
+    <!--<img src="https://raw.githubusercontent.com/stiliajohny/macos-ansible-playbook/main/.assets/logo.png" alt="Main Logo" width="80" height="80"> -->
   </a>
 
   <h3 align="center">macos-ansible-playbook</h3>
