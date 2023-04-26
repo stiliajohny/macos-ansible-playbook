@@ -55,14 +55,10 @@ The following tasks have to wait for the initial Dropbox sync to complete before
 - create an ssh key and add it to github
   `ssh-keygen -t rsa -b 4096 -C github_ed25519"
 
-### Font setup.
+### Terminal setup.
 
-All fonts are available via Homebrew Cask Fonts on macOS (OS X)
-
-```bash
-brew tap homebrew/cask-fonts
-brew install font-hack-nerd-font
-```
+- iTerm2 configuration
+  - Go to Preferences > Profiles > Text and set font to `Fira Code Retina 12pt`
 
 ### Vim setup
 
@@ -76,9 +72,7 @@ brew install font-hack-nerd-font
   `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 - Install tmux plugins with `prefix + I`
 
-# Get some Apps Configured
-
-# k3d
+### k3d
 
 - Confirm k3d is installed
 

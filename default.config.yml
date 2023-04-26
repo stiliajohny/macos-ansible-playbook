@@ -63,14 +63,12 @@ sudoers_custom_config: |
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - ack
-  - openjdk
-  - tor
-  - agg
-  - asciinema
   - act
+  - agg
   - airspy
   - ansible
   - arduino-cli
+  - asciinema
   - asdf
   - autoconf
   - aws-cdk
@@ -91,6 +89,7 @@ homebrew_installed_packages:
   - eslint
   - exa
   - ffmpeg
+  - ffmpeg
   - fzf
   - gcc@11
   - gettext
@@ -110,13 +109,13 @@ homebrew_installed_packages:
   - helm
   - htop
   - httpie
-  - k3d
   - hugo
   - infracost
   - iperf
   - iperf3
   - jmeter
   - jq
+  - k3d
   - k8sgpt-ai/k8sgpt/k8sgpt
   - k9s
   - koekeishiya/formulae/skhd
@@ -127,13 +126,14 @@ homebrew_installed_packages:
   - libevent
   - mcrypt
   - minikube
-  - mysql
   - molecule
+  - mysql
   - ncdu
   - nikto
   - nmap
   - node
   - nvm
+  - openjdk
   - openssl
   - php
   - picocom
@@ -154,6 +154,7 @@ homebrew_installed_packages:
   - tldr
   - tmate
   - tmux
+  - tor
   - tree
   - trivy
   - unzip
@@ -162,14 +163,14 @@ homebrew_installed_packages:
   - watch
   - wget
   - wrk
-  - yarn
   - yamllint
-  - zsh-history-substring-search
-  - zsh-syntax-highlighting
+  - yarn
   - zsh-autosuggestions
   - zsh-completions
+  - zsh-history-substring-search
   - zsh-navigation-tools
-  - ffmpeg
+  - zsh-syntax-highlighting
+  - font-hack-nerd-font
 
 homebrew_taps:
   - homebrew/core
@@ -190,6 +191,9 @@ homebrew_taps:
   - thoughtbot/formulae
   - victor/whereami
   - weaveworks/tap
+  - homebrew/cask-fonts
+  - homebrew/cask-fonts
+
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -233,6 +237,7 @@ homebrew_cask_apps:
   - zoom
   - zotero
   - zulip
+  - font-fira-code
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
