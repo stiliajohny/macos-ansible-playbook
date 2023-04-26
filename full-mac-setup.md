@@ -53,7 +53,7 @@ The following tasks have to wait for the initial Dropbox sync to complete before
 ### SSH setup.
 
 - create an ssh key and add it to github
-  `ssh-keygen -t rsa -b 4096 -C github_ed25519"
+  `ssh-keygen -t rsa -b 4096 -C $(hostname) -f $HOME/.ssh/github_ed25519"
 
 ### Terminal setup.
 
